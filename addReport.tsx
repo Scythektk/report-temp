@@ -29,6 +29,12 @@ const AddReport: React.FC () => {
 		textInputDivs[textInputDivs.length - 1].remove()
 	}
 
+	const handlePageNameChange = (index: number, value: string) => {
+		const updatedPageNames = [...pageNames];
+		updatedPageNames[index] = value;
+		setPageNames(updatedPageNames);
+	}
+
 	const handleSubmit = () => {
 
 	}
