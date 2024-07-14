@@ -30,10 +30,15 @@ const ReportComponent = () => {
             <h2>{report.reportName}</h2>
             <p><a href={report.reportUrl}>Report URL</a></p>
             <p>Page Names: {/* Assuming pageNames is an array and needs to be displayed */}</p>
+            <ul>
+              {report.pageNames.map((pageName, index) => (
+                <li key={index}>{pageName}</li>
+              ))}
+            </ul>
             <p><a href={report.gridlink}>Grid Link</a></p>
           </div>
           <div style={{ textAlign: 'right' }}>
-            <p>Upload Date: {report.modifyDate}</p>
+            <p>Upload Date: {new Date(report.modifyDate).toLocaleDateString()}</p>
           </div>
         </li>
         ))}
